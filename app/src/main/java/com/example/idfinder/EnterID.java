@@ -2,6 +2,7 @@ package com.example.idfinder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,11 +29,12 @@ public class EnterID extends AppCompatActivity {
         String ID = num.getText().toString(); // the input is converted to a string
         if (!ids.contains(ID)) {
             ids.add((ID)); // if the id is not in the list it is added
-            num.setText(""); // the text box is cleared
             Toast.makeText(EnterID.this, "ID Added", Toast.LENGTH_SHORT).show(); // User is notified if ID is successfully added
         } else {
             Toast.makeText(EnterID.this, "ID Already Exists", Toast.LENGTH_SHORT).show(); // User is notified if ID is already in the list
         }
+        Intent refresh = new Intent(EnterID.this, EnterID.class);
+        startActivity(refresh);
     }
 
     public void removeID (View v) {
@@ -40,10 +42,11 @@ public class EnterID extends AppCompatActivity {
         String ID = num.getText().toString(); // the input is converted to a string
         if (ids.contains(ID)) {
             ids.remove((ID)); // if the id is in the list it is removed
-            num.setText(""); // the text box is cleared
             Toast.makeText(EnterID.this, "ID Removed", Toast.LENGTH_SHORT).show(); // User is notified if ID is successfully removed
         } else {
             Toast.makeText(EnterID.this, "ID Doesn't Exist To Remove", Toast.LENGTH_SHORT).show(); // User is notified if ID is not in the list and therefore cannot be removed
         }
+        Intent refresh = new Intent(EnterID.this, EnterID.class);
+        startActivity(refresh);
     }
 }

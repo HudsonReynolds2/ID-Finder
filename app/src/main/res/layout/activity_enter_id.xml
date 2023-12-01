@@ -59,9 +59,10 @@
             android:id="@+id/inputNumber"
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:autofillHints=""
             android:ems="10"
             android:inputType="number"
-            android:autofillHints=""
+            android:textSize="12sp"
             tools:ignore="LabelFor" />
     </TableRow>
 

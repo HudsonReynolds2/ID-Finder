@@ -11,4 +11,7 @@
     <string name="student">Student</string>
     <string name="are_you_a_student_or_admin">Are you a student or admin?</string>
     <string name="admin">Admin</string>
+    <string name="your_id_has_been_found_make_your_way_to_the_collection_office_at_1_street_road_to_get_it_back">Your ID has been found! Make your way to the collection office at 1 street road to get it back.</string>
+    <string name="your_id_has_not_been_found_yet_sorry">Your ID has not been found, ... yet. Sorry :(</string>
+    <string name="submit">Submit</string>
 </resources>

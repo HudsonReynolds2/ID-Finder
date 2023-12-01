@@ -2,7 +2,9 @@ package com.example.idfinder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 public class StudentActivity extends AppCompatActivity {
@@ -16,4 +18,17 @@ public class StudentActivity extends AppCompatActivity {
         String initialText = "U";
         editText.setText(initialText);
     }
+
+    public void submitInfo(View v) {
+        // if id is found in system
+        Intent idFound = new Intent(StudentActivity.this, IDfound.class); // create intent if id is found in system
+        startActivity(idFound); // sends the user to the id found screen
+
+        // if id is not found
+
+        Intent idNotFound = new Intent(StudentActivity.this, IDnotfound.class); // create intent if id is not found in system
+
+        startActivity(idNotFound);
+    }
+
 }

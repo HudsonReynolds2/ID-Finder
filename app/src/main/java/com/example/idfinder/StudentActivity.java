@@ -16,7 +16,7 @@ public class StudentActivity extends AppCompatActivity {
 
         EditText editText = findViewById(R.id.identificationInput);
         String initialText = "U";
-        editText.setText(initialText);
+        editText.setText(initialText); // sets a "U" as the first value in the text box on creation
     }
 
     public void submitInfo(View v) {
@@ -28,7 +28,7 @@ public class StudentActivity extends AppCompatActivity {
 
         Intent idNotFound = new Intent(StudentActivity.this, IDnotfound.class); // create intent if id is not found in system
 
-        startActivity(idNotFound);
+        startActivity(idNotFound); // sends the user to the id not found screen
     }
 
 }

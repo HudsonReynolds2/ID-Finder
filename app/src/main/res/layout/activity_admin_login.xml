@@ -33,7 +33,8 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="Autofill,LabelFor" />
     </TableRow>
 
     <TableRow
@@ -53,7 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="Autofill,LabelFor" />
     </TableRow>
 
     <TextView
@@ -63,7 +65,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="56dp"
         android:layout_marginBottom="2dp"
-        android:text="Username"
+        android:text="@string/username"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/usernameBar"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="21dp"
-        android:text="Password"
+        android:text="@string/password"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/passwordBar"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +94,7 @@
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/BUred"
         android:onClick="enterEmail"
-        android:text="Login"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toStartOf="parent"

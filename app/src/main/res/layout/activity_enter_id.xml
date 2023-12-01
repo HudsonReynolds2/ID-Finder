@@ -14,11 +14,13 @@
         android:layout_marginEnd="104dp"
         android:backgroundTint="@color/BUred"
         android:clickable="true"
+        android:focusable="true"
         android:onClick="removeID"
-        android:text="Remove"
+        android:text="@string/remove"
         app:cornerRadius="@dimen/cardview_compat_inset_shadow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/identification" />
+        app:layout_constraintTop_toBottomOf="@+id/identification"
+        />
 
     <TableRow
         android:id="@+id/tableRow"
@@ -34,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:text="Enter Found ID #"
+        android:text="@string/enter_found_id"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +60,9 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
     </TableRow>
 
     <Button
@@ -67,8 +71,9 @@
         android:layout_height="43dp"
         android:layout_marginTop="18dp"
         android:backgroundTint="@color/BUred"
-        android:text="Add"
+        android:text="@string/add"
         android:clickable="true"
+        android:focusable="true"
         android:onClick="addID"
         app:cornerRadius="@dimen/cardview_compat_inset_shadow"
         app:layout_constraintEnd_toStartOf="@+id/removeButton"

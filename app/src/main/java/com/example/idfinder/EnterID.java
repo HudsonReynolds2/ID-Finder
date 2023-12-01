@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,10 @@ public class EnterID extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_id);
+
+        EditText editText = findViewById(R.id.inputNumber);
+        String initialText = "U";
+        editText.setText(initialText);
     }
     public void addID (View v){
         TextView num = findViewById(R.id.inputNumber); // inputted ID is saved as a textView

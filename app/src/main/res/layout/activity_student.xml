@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminLoginActivity">
+    tools:context=".StudentActivity">
 
     <TableRow
         android:id="@+id/tableRow"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableRow
-        android:id="@+id/usernameBar"
+        android:id="@+id/identificationBar"
         android:layout_width="200dp"
         android:layout_height="35dp"
         android:background="#D3D1D1"
@@ -28,16 +28,16 @@
         app:layout_constraintVertical_bias="0.125" >
 
         <EditText
-            android:id="@+id/emailAddress"
+            android:id="@+id/identificationInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:textSize="14sp" />
+            android:inputType="number"
+            android:textSize="12sp" />
     </TableRow>
 
     <TableRow
-        android:id="@+id/passwordBar"
+        android:id="@+id/emailBar"
         android:layout_width="200dp"
         android:layout_height="35dp"
         android:background="#D3D1D1"
@@ -45,27 +45,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameBar"
-        app:layout_constraintVertical_bias="0.079" >
+        app:layout_constraintTop_toBottomOf="@+id/identificationBar"
+        app:layout_constraintVertical_bias="0.079" >>
 
         <EditText
-            android:id="@+id/password"
-            android:layout_width="wrap_content"
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textEmailAddress"
+            android:textSize="12sp" />
     </TableRow>
 
     <TextView
-        android:id="@+id/usernameText"
+        android:id="@+id/buIDtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="56dp"
         android:layout_marginBottom="2dp"
-        android:text="Username"
+        android:text="Enter Lost BU ID Number"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/usernameBar"
+        app:layout_constraintBottom_toTopOf="@+id/identificationBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableRow"
         app:layout_constraintVertical_bias="1.0" />
@@ -76,27 +77,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="21dp"
-        android:text="Password"
+        android:text="Preferred Contact Email"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/passwordBar"
+        app:layout_constraintBottom_toTopOf="@+id/emailBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameBar"
+        app:layout_constraintTop_toBottomOf="@+id/identificationBar"
         app:layout_constraintVertical_bias="0.0" />
 
 
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/BUred"
-        android:onClick="enterEmail"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordBar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

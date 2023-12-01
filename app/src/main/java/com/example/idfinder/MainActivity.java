@@ -15,14 +15,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        adminLoginButton = (Button) findViewById(R.id.adminButton); //intializing adminButton
-        adminLoginButton.setOnClickListener(this::AdminLoginPage); //setting the click to adminLoginPage
+        adminLoginButton = (Button) findViewById(R.id.adminButton); //initializing adminButton
+        adminLoginButton.setOnClickListener(this::launchAdmin); //setting the click to adminLoginPage
     }
 
-    public void AdminLoginPage(View v) {
+    public void launchAdmin(View v) {
         //creates an 'Intent' to open the login page
         Intent adminLogin = new Intent(MainActivity.this, AdminLoginActivity.class);
         startActivity(adminLogin);
+    }
+
+    public void launchStudent(View v) {
+        //creates an 'Intent' to open the student/user page
+        Intent studentPage = new Intent(MainActivity.this, StudentActivity.class);
+        startActivity(studentPage);
     }
 
 }

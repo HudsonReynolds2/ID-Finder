@@ -8,4 +8,7 @@
     <string name="login">Login</string>
     <string name="enter_lost_bu_id_number">Enter Lost BU ID Number</string>
     <string name="preferred_contact_email">Preferred Contact Email</string>
+    <string name="student">Student</string>
+    <string name="are_you_a_student_or_admin">Are you a student or admin?</string>
+    <string name="admin">Admin</string>
 </resources>

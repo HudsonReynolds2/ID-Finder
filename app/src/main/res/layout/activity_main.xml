@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you a student or admin?"
+        android:text="@string/are_you_a_student_or_admin"
         android:textAlignment="center"
         android:textColor="#971919"
         android:textSize="20sp"
@@ -37,7 +37,7 @@
         android:backgroundTint="#971919"
         android:clickable="true"
         android:onClick="launchStudent"
-        android:text="Student"
+        android:text="@string/student"
         android:textAllCaps="false"
         android:textColor="#FFFFFFFF"
         android:textColorHighlight="@color/BUred"
@@ -47,7 +47,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.832" />
+        app:layout_constraintVertical_bias="0.832"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/adminButton"
@@ -55,8 +56,9 @@
         android:layout_height="75dp"
         android:backgroundTint="#971919"
         android:clickable="true"
+        android:focusable="true"
         android:onClick="launchAdmin"
-        android:text="Admin"
+        android:text="@string/admin"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,4 +66,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tableRow"
         app:layout_constraintVertical_bias="0.474" />
+
+    <ImageView
+        android:id="@+id/lostID"
+        android:layout_width="366dp"
+        android:layout_height="343dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lost_id_logo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

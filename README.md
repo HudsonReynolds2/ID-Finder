@@ -6,6 +6,7 @@ This app is designed to help BU affiliated person to recover their ID. The perso
 - Has server-client Interaction
 - Database to store the IDs
 - Simple UI/UX
+- Read JSON files
 ### Tools Used
 - Android Studio
 - Visual Studio Code

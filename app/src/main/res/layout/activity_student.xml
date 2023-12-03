@@ -63,14 +63,13 @@
         app:srcCompat="@drawable/lost_id_logo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/checkForIDButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/BUred"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="submitInfo"
         android:text="@string/check_if_found"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.61"

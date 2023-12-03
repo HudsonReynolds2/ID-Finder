@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -33,21 +34,20 @@ public class StudentActivity extends AppCompatActivity {
 
         checkForID = (Button) findViewById(R.id.checkForIDButton);
         checkForID.setOnClickListener(this::checkForID);
-
-        EditText editText = findViewById(R.id.identificationInput);
-        String initialText = "U";
-        editText.setText(initialText); // sets a "U" as the first value in the text box on creation
         isFound = ""; //initialize
     }
 
     private void checkForID(View view) {
         //change string to json
         TextView value = findViewById(R.id.identificationInput);
-        String str = value.getText().toString();
-        String id = str.substring(1);
-        String jsonData = "{\"id\" : \"" + id + "\"}";
+        String id = value.getText().toString();
+        if (id.length() == 8) {
+            String jsonData = "{\"id\" : \"" + id + "\"}";
+            new CheckID().execute(jsonData);
+        } else {
+            Toast.makeText(StudentActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();
+        }
         //send the data to the server to check if the ID exists in the database
-        new CheckID().execute(jsonData);
     }
 
     private class CheckID extends AsyncTask<String, Void, String> {

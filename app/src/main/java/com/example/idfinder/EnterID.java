@@ -29,10 +29,6 @@ public class EnterID extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_id);
 
-        EditText editText = findViewById(R.id.inputNumber);
-        String initialText = "U";
-        editText.setText(initialText); // sets a "U" as the first value in the text box on creation
-
         addButton = (Button) findViewById(R.id.addButton);
         addButton.setOnClickListener(this::addID);
 
@@ -43,38 +39,38 @@ public class EnterID extends AppCompatActivity{
     private void addID(View view) {
         //this block of code modifies the text values into json string without the "U"
         TextView value = findViewById(R.id.inputNumber);
-        String str = value.getText().toString();
-        String id = str.substring(1);
-        String jsonData = "{\"id\" : \"" + id + "\"}";
+        String id = value.getText().toString();
+        //make sure what they entered was a valid-8-digit ID
+        if (id.length() == 8) {
+            String jsonData = "{\"id\" : \"" + id + "\"}";
+            //Send the data to the server and add it
+            AddIDToServer(jsonData);
+            //send a response to the user saying it was added
+            Toast.makeText(EnterID.this, "ID Added", Toast.LENGTH_SHORT).show();
+            Intent refresh = new Intent(EnterID.this, EnterID.class);
+            startActivity(refresh); // recreates the page so that a "U" is placed back in the starting position
+        } else {
+            Toast.makeText(EnterID.this, "Invalid Input", Toast.LENGTH_SHORT).show();
+        }
 
-        //Send the data to the server and add it
-        Log.d("data-json-add", jsonData);
-        AddIDToServer(jsonData);
-        GetAllData();
-
-        //send a response to the user saying it was added
-        Toast.makeText(EnterID.this, "ID Added", Toast.LENGTH_SHORT).show();
-        Intent refresh = new Intent(EnterID.this, EnterID.class);
-        startActivity(refresh); // recreates the page so that a "U" is placed back in the starting position
     }
     private void removeID(View view) {
         //this block of code modifies the text values into json string without the "U"
         TextView value = findViewById(R.id.inputNumber);
-        String str = value.getText().toString();
-        String id = str.substring(1);
-        String jsonData = "{\"id\" : \"" + id + "\"}";
-
-        //Send the data to the server and the server will remove it from its database
-        Log.d("data-json-remove", jsonData);
-        RemoveIDFromServer(jsonData);
-        GetAllData();
-
-        //send a response to the user saying it was removed
-        Toast.makeText(EnterID.this, "ID Removed", Toast.LENGTH_SHORT).show();
-        Intent refresh = new Intent(EnterID.this, EnterID.class);
-        startActivity(refresh); // recreates the page so that a "U" is placed back in the starting position
+        String id = value.getText().toString();
+        //make sure what they entered was a valid-8-digit ID
+        if (id.length() == 8) {
+            String jsonData = "{\"id\" : \"" + id + "\"}";
+            //Send the data to the server and the server will remove it from its database
+            RemoveIDFromServer(jsonData);
+            //send a response to the user saying it was removed
+            Toast.makeText(EnterID.this, "ID Removed", Toast.LENGTH_SHORT).show();
+            Intent refresh = new Intent(EnterID.this, EnterID.class);
+            startActivity(refresh); // recreates the page so that a "U" is placed back in the starting position
+        } else {
+            Toast.makeText(EnterID.this, "Invalid Input", Toast.LENGTH_SHORT).show();
+        }
     }
-
 
     private static void AddIDToServer(final String jsonData) {
         new AsyncTask<Void, Void, Void>() {

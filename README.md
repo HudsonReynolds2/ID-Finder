@@ -8,6 +8,7 @@ This app is designed to help BU affiliated person to recover their ID. The perso
 - Simple UI/UX
 ### Tools Used
 - Android Studio
+- Visual Studio Code
 - Node.js
 - Express.js
 - SQLite Database

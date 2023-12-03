@@ -1,4 +1,4 @@
-//imports and required modules
+//imports/required modules
 const express = require('express');
 const app = express();
 
@@ -100,4 +100,4 @@ app.delete('/deleteAll', (req, res) => {
 });
 
 //starts the server
-app.listen(5000, () => console.log('Example app is listening on port 500.'));
+app.listen(5000, () => console.log('Example app is listening on port 5000.'));

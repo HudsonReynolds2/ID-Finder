@@ -18,10 +18,6 @@ import java.nio.charset.StandardCharsets;
 
 
 public class EnterID extends AppCompatActivity{
-    private static final String SERVER_URL = "http://10.239.182.200:5000";
-    private static final String addingIDRoute = "/addID";
-    private static final String removeIDRoute = "/deleteID";
-    private static final String getDataRoute = "/getIDs";
     Button addButton;
     Button removeIDButton;
 
@@ -78,7 +74,7 @@ public class EnterID extends AppCompatActivity{
             protected Void doInBackground(Void... params) {
                 try {
                     //Secure a Connection to the server
-                    URL url = new URL(SERVER_URL + addingIDRoute);
+                    URL url = new URL(Settings.SERVER_URL + Settings.addingIDRoute);
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     //Send the ID to the server to add it in the database
                     connection.setRequestMethod("POST");//keyword: POST; tells the server I want to "add" something
@@ -101,7 +97,7 @@ public class EnterID extends AppCompatActivity{
             protected Void doInBackground(Void... params) {
                 try {
                     //Secure a Connection to the server
-                    URL url = new URL(SERVER_URL + removeIDRoute);
+                    URL url = new URL(Settings.SERVER_URL + Settings.removeIDRoute);
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     //Send the info to the server to delete
                     connection.setRequestMethod("DELETE"); //keyword: DELETE; tells the server I want to delete info
@@ -124,7 +120,7 @@ public class EnterID extends AppCompatActivity{
             protected Void doInBackground(Void... params) {
                 try {
                     //Secure a Connection to the server
-                    URL url = new URL(SERVER_URL + getDataRoute);
+                    URL url = new URL(Settings.SERVER_URL + Settings.getDataRoute);
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
                     //Gets the data and is in JSON format

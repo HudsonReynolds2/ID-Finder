@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button adminLoginButton; //declared AdminLongButton
+    Button adminLoginButton; //declared AdminLongButton
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

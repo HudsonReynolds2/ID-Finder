@@ -19,9 +19,6 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 public class StudentActivity extends AppCompatActivity {
-    private static final String SERVER_URL = "http://10.239.182.200:5000";
-    private static final String checkIDRoute = "/checkID";
-
     Button checkForID;
 
     String isFound = "";
@@ -57,7 +54,7 @@ public class StudentActivity extends AppCompatActivity {
             //then return true or false
             try {
                 String inputString = params[0];
-                URL url = new URL(SERVER_URL + checkIDRoute); // Replace with your server details
+                URL url = new URL(Settings.SERVER_URL + Settings.checkIDRoute); // Replace with your server details
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
 

@@ -16,5 +16,5 @@ app.listen(5000, () => console.log('Example app is listening on port 5000.'));
 
 
 ### Running the Server
-To run the server, go to the PowerShell that was opened and type in `ipconfig` and record your IPv4 address. This will be your server URL. Make sure to update this in your [Settings.java](https://github.com/HudsonReynolds2/ID-Finder/blob/master/app/src/main/java/com/example/idfinder/Settings.java)located inside app->main->java->com->example->idfinder->Settings.java in the main branch. Then to run it, just type in `node server.js`; to stop the server, use **CTRL + C** (Windows) or **COMMAND+C** (Mac). 
+To run the server, go to the PowerShell that was opened and type in `ipconfig` and record your IPv4 address. This will be your server URL. Make sure to update this in your [Settings.java](https://github.com/HudsonReynolds2/ID-Finder/blob/master/app/src/main/java/com/example/idfinder/Settings.java) located inside app->main->java->com->example->idfinder->Settings.java in the main branch. Then to run it, just type in `node server.js`; to stop the server, use **CTRL + C** (Windows) or **COMMAND+C** (Mac). 
 

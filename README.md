@@ -7,7 +7,7 @@ To get the Server running, open a folder/workspace where you will host the serve
 3. `npm install sqlite3` <- installs the database package
 
 The commands above will allow you to create the Server
-###### (Optional) Changing the Port
+#### (Optional) Changing the Port
 
 If you wish to change the port of your server, go to `server.js` and change the number `5000` to wanted port number in the following line: 
 ```javascript 

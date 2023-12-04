@@ -1,6 +1,6 @@
 # ID-Finder
 ### About
-This app is designed to help BU affiliated person to recover their ID. The person who lost their ID can check to see if admin has found the ID and is inside the database. On the other-hand, the admin can input the found ID in the database so the student can check it; and the admin can then remove the ID if the ID is found.
+This app is designed to help BU-affiliated person to recover their ID. The person who lost their ID can check to see if admin has found the ID and is inside the database. On the other-hand, the admin can input the found ID in the database so the student can check it; and the admin can then remove the ID if the ID is found.
 
 ### Features
 - Has server-client Interaction
